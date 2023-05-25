@@ -1,0 +1,35 @@
+.container {
+    border: 2px solid black;
+    background-color: black;
+
+    h1 {
+        font-size: 86px;
+        font-weight: 700;
+        text-align: center;
+        
+        a {
+            color: rgb(250, 250, 45);
+            text-decoration: none;
+        }
+    }
+
+    .list {
+        border: 2px solid red;
+        list-style: none;
+
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+
+        li {
+            border: 2px solid green;
+
+            a {
+                color: rgb(250, 250, 45);
+                font-size: 46px;
+                font-weight: 700;
+                text-decoration: none;
+            }
+        }
+    }
+}
