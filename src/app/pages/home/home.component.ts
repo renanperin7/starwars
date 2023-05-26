@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CardsService } from '../cards.service';
+import { Card } from 'src/app/card';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
 
 }

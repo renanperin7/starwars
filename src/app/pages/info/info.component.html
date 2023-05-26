@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="navbar">
+        <h1>Star Wars World</h1>
+
+        <div class="options">
+            <button (click)="loadInfo('character')">Character</button>
+            <button (click)="loadInfo('planets')">Planets</button>
+            <button (click)="loadInfo('spaceships')">Spaceships</button>
+            <button (click)="loadInfo('vehicles')">Vehicles</button>
+            <button (click)="loadInfo('films')">Films</button>
+        </div>
+    </div>
+    <div class="content">
+        <div *ngIf="informacoesCarregadas">
+            <div *ngFor="let item of characters">
+                {{item}}
+            </div>
+            <div *ngFor="let item of planets">
+                {{item}}
+            </div>
+            <div *ngFor="let item of spaceships">
+                {{item}}
+            </div>
+            <div *ngFor="let item of vehicles">
+                {{item}}
+            </div>
+            <div *ngFor="let item of films">
+                {{item}}
+            </div>
+        </div>
+    </div>
+</div>
