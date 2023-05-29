@@ -10,6 +10,7 @@ import { Card } from 'src/app/card';
 export class InfoComponent {
 
   informacoesCarregadas: boolean = false;
+  isLoading: boolean = true;
 
   characters:  any  = '';
   planets:  any  = '';
@@ -18,8 +19,6 @@ export class InfoComponent {
   films:  any  = '';
 
   card!: string
-  id: number = 1
-  // names: string[] = []
 
   constructor(private service: CardsService) {}
 
@@ -30,7 +29,7 @@ export class InfoComponent {
   loadInfo(botao: string) {
 
     if (botao === 'character') {
-
+      this.isLoading = true;
       const names: string[] = [];
 
       const fetchPeople = (url: string | null) => {
@@ -45,6 +44,7 @@ export class InfoComponent {
           });
         } else {
           this.characters = names;
+          this.isLoading = false;
         }
       };
       
@@ -56,7 +56,7 @@ export class InfoComponent {
       });
 
     } else if (botao === 'planets') {
-
+      this.isLoading = true;
       const planets: string[] = [];
 
       const fetchPeople = (url: string | null) => {
@@ -71,6 +71,7 @@ export class InfoComponent {
           });
         } else {
           this.planets = planets;
+          this.isLoading = false;
         }
       };
       
@@ -82,7 +83,7 @@ export class InfoComponent {
       });
 
     } else if (botao === 'spaceships') {
-
+      this.isLoading = true;
       const spaceships: string[] = [];
 
       const fetchPeople = (url: string | null) => {
@@ -97,6 +98,7 @@ export class InfoComponent {
           });
         } else {
           this.spaceships = spaceships;
+          this.isLoading = false;
         }
       };
 
@@ -108,7 +110,7 @@ export class InfoComponent {
       });
 
     } else if (botao === 'vehicles') {
-
+      this.isLoading = true;
       const vehicles: string[] = [];
 
       const fetchPeople = (url: string | null) => {
@@ -123,6 +125,7 @@ export class InfoComponent {
           });
         } else {
           this.vehicles = vehicles;
+          this.isLoading = false;
         }
       };
 
@@ -134,11 +137,12 @@ export class InfoComponent {
       });
 
     } else if (botao === 'films') {
-
+      this.isLoading = true;
       this.service.getAllFilms().subscribe((films: any) => {
         const film = films.results.map((films: any) => films.title);
 
         this.films = film;
+        this.isLoading = false;
       });
 
     }

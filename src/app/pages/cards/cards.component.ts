@@ -15,6 +15,8 @@ export class CardsComponent {
 
   id: number = 1
 
+  luke: string = 'assets/luke-skywalker.jpeg'
+
   constructor(private service: CardsService) {}
 
   ngOnInit() {

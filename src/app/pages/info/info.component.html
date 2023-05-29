@@ -12,21 +12,30 @@
     </div>
     <div class="content">
         <div *ngIf="informacoesCarregadas">
-            <div *ngFor="let item of characters">
-                {{item}}
-            </div>
-            <div *ngFor="let item of planets">
-                {{item}}
-            </div>
-            <div *ngFor="let item of spaceships">
-                {{item}}
-            </div>
-            <div *ngFor="let item of vehicles">
-                {{item}}
-            </div>
-            <div *ngFor="let item of films">
-                {{item}}
-            </div>
+
+            <ng-container *ngIf="!isLoading">
+                <!-- Conteúdo a ser exibido após o carregamento das informações -->
+                <div *ngFor="let item of characters">
+                    {{item}}
+                </div>
+                <div *ngFor="let item of planets">
+                    {{item}}
+                </div>
+                <div *ngFor="let item of spaceships">
+                    {{item}}
+                </div>
+                <div *ngFor="let item of vehicles">
+                    {{item}}
+                </div>
+                <div *ngFor="let item of films">
+                    {{item}}
+                </div>
+                
+            </ng-container>
+            <div *ngIf="isLoading" class="loader">
+                <!-- HTML/CSS do loader -->
+            </div> 
         </div>
+        
     </div>
 </div>
