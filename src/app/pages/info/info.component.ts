@@ -27,6 +27,11 @@ export class InfoComponent {
   }
 
   loadInfo(botao: string) {
+    this.characters = '';
+    this.planets= '';
+    this.spaceships = '';
+    this.vehicles= '';
+    this.films = '';
 
     if (botao === 'character') {
       this.isLoading = true;
