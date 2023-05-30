@@ -1,5 +1,5 @@
 .container {
-    background-image: url('../../../assets/starwars-image3.jpg');
+    background-image: url('../../../assets/starwars-image2.jpg');
     border-bottom: 2px solid rgb(250, 250, 45);
 
     h1 {
@@ -25,9 +25,17 @@
         li {
             a {
                 color: rgb(250, 250, 45);
+                padding: 2px 4px;
                 font-size: 46px;
                 font-weight: 700;
                 text-decoration: none;
+            }
+
+            a:hover {
+                color: rgb(0, 0, 0);
+                background-color: rgb(250, 250, 45);
+                border-radius: 12px;
+                transition: 1s;
             }
         }
     }
