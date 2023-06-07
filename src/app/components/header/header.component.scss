@@ -29,13 +29,13 @@
                 font-size: 46px;
                 font-weight: 700;
                 text-decoration: none;
+                transition: all 1s ease;
             }
 
             a:hover {
                 color: rgb(0, 0, 0);
                 background-color: rgb(250, 250, 45);
                 border-radius: 12px;
-                transition: 1s;
             }
         }
     }
